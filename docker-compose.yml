@@ -1,0 +1,11 @@
+
+  postclipfront:
+    container_name: postclipfront
+    image: trum/postclipsms_front
+    command: "npm start -- --host=0.0.0.0"
+    ports:
+      - 4200:4200
+      - 49152:49152
+    #volumes:
+      #- .:/PostClipsFE
+      #- /PostClipsFE/node_modules
