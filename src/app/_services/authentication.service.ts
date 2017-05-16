@@ -60,7 +60,7 @@ export class AuthenticationService {
       let options = new RequestOptions({ headers: headers });
       var resul = false;
       //http://192.168.99.102:4000/user/resources/authentication
-      return this.http.post('http://user-ms:4000/user/resources/authentication', body, options)
+      return this.http.post('http://192.168.99.103:4002/user/resources/authentication', body, options)
                       .map((response: Response) => {
                         return response.json();
                       });
@@ -75,7 +75,7 @@ export class AuthenticationService {
         let options = new RequestOptions({ headers: headers });
         let valid: boolean;
         //http://192.168.99.102:4000/user/resources/authentication/
-        return this.http.delete('http://user-ms:4000/user/resources/authentication/' + token, options);
+        return this.http.delete('http://192.168.99.103:4002/user/resources/authentication/' + token, options);
 
 
     }
@@ -106,7 +106,7 @@ export class AuthenticationService {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         //http://192.168.99.102:4000/user/resources/users/
-        return this.http.post('http://user-ms:4000/user/resources/users/', body, options);
+        return this.http.post('http://192.168.99.103:4002/user/resources/users/', body, options);
         // remove user from local storage to log user out
         //localStorage.removeItem('currentUser');
 
