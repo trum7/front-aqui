@@ -137,7 +137,7 @@ export class AuthenticationService {
         let options = new RequestOptions({ headers: headers });
         let valid: boolean;
         //http://192.168.99.102:4000/user/resources/verification/
-        return this.http.post('http://user-ms:4000/user/resources/verification/', body, options)
+        return this.http.post('http://192.168.99.103:4002/user/resources/verification/', body, options)
           .map((response: Response) => {
             return response.json();
           });
